@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "a",
+      "password": "a",
+      "_id": "9703ee4b-5503-4115-bec3-558604fe815c"
+    }
+  ],
+  "nations": [
+    {
+      "userid": "9703ee4b-5503-4115-bec3-558604fe815c",
+      "title": "Fire Nation",
+      "_id": "a12e162a-a40a-4085-be9d-49ba78c472d8"
+    }
+  ],
+  "lores": []
+}
