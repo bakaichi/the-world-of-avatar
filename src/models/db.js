@@ -6,6 +6,7 @@ export const db = {
     userStore: null,
     nationStore: null,
     loreStore: null,
+    
   
     init() {
       this.userStore = userJsonStore;

@@ -6,6 +6,13 @@
       "email": "a",
       "password": "a",
       "_id": "9703ee4b-5503-4115-bec3-558604fe815c"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "b",
+      "password": "b",
+      "_id": "0a801c7f-a191-4de6-ba28-ccb9adadfdb3"
     }
   ],
   "nations": [
@@ -13,7 +20,31 @@
       "userid": "9703ee4b-5503-4115-bec3-558604fe815c",
       "title": "Fire Nation",
       "_id": "a12e162a-a40a-4085-be9d-49ba78c472d8"
+    },
+    {
+      "userid": "0a801c7f-a191-4de6-ba28-ccb9adadfdb3",
+      "title": "Air Temples",
+      "_id": "7bbaf6ba-0276-43df-852b-3a1deedd36ff"
+    },
+    {
+      "userid": "0a801c7f-a191-4de6-ba28-ccb9adadfdb3",
+      "title": "Water Tribes",
+      "_id": "c725e57f-c265-47b5-a0b9-944edc2369bc"
+    },
+    {
+      "userid": "0a801c7f-a191-4de6-ba28-ccb9adadfdb3",
+      "title": "Earth Kingdom",
+      "_id": "76d5c62d-be58-4922-9378-629f99cc20e7"
     }
   ],
-  "lores": []
+  "lores": [
+    {
+      "bookno": "1",
+      "charactersinv": "Aang",
+      "location": "Fire Nation",
+      "lore": "lorem ipsum",
+      "_id": "664863e3-4106-4d78-84d0-e57eca5bd105",
+      "nationid": "a12e162a-a40a-4085-be9d-49ba78c472d8"
+    }
+  ]
 }

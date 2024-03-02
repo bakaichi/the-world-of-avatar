@@ -4,7 +4,7 @@ export const dashboardController = {
   index: {
     handler: async function (request, h) {
       const loggedInUser = request.auth.credentials;
-      const nations = await db.nationStore.getUserNations(loggedInUser._id);
+      const nations = await db.nationStore.getAllNations(loggedInUser._id);
       const viewData = {
         title: "Avatar Dashboard",
         user: loggedInUser,
