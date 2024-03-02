@@ -9,8 +9,8 @@ export const loreJsonStore = {
 
   async addLore(nationId, lore) {
     await db.read();
-    track._id = v4();
-    track.nationid = nationId;
+    lore._id = v4();
+    lore.nationid = nationId;
     db.data.lores.push(lore);
     await db.write();
     return lore;
