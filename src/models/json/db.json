@@ -6,13 +6,6 @@
       "email": "a",
       "password": "a",
       "_id": "9703ee4b-5503-4115-bec3-558604fe815c"
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "b",
-      "password": "b",
-      "_id": "0a801c7f-a191-4de6-ba28-ccb9adadfdb3"
     }
   ],
   "nations": [
@@ -45,6 +38,24 @@
       "lore": "lorem ipsum",
       "_id": "664863e3-4106-4d78-84d0-e57eca5bd105",
       "nationid": "a12e162a-a40a-4085-be9d-49ba78c472d8"
+    },
+    {
+      "bookno": "2",
+      "charactersinv": "Zuko",
+      "location": "",
+      "lore": "",
+      "_id": "d91e2eb3-b730-4153-a6d2-5ae5b0348892",
+      "nationid": "a12e162a-a40a-4085-be9d-49ba78c472d8"
+    }
+  ],
+  "characters": [
+    {
+      "_id": "37e562e3-0412-4b08-8fb6-6b47b81a9df8",
+      "name": "Zuko"
+    },
+    {
+      "_id": "6553a2ef-01a6-42f4-8625-a163151ada8f",
+      "name": "Azula"
     }
   ]
 }
