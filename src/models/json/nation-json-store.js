@@ -19,11 +19,11 @@ export const nationJsonStore = {
   
     async getNationById(id) {
       await db.read();
-      const list = db.data.nations.find((nation) => nation._id === id);
-      list.lores = await loreJsonStore.getLoresByNationId(list._id);
-      return list;
+      // eslint-disable-next-line no-shadow
+      const nation = db.data.nations.find(nation => nation._id === id);
+      return nation;
     },
-  
+    
     async getUserNations(userid) {
       await db.read();
       return db.data.nations.filter((nation) => nation.userid === userid);

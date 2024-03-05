@@ -16,10 +16,11 @@ export const loreJsonStore = {
     return lore;
   },
 
-  async getLoresByNationId(id) {
+getLoresByNationId: async function(id) {
     await db.read();
-    return db.data.lores.filter((lore) => lore.nationid === id);
-  },
+    const lores = db.data.lores.filter(lore => lore.nationid === id);
+    return lores;
+},
 
   async getLoreById(id) {
     await db.read();

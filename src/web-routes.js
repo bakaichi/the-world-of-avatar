@@ -14,6 +14,6 @@ export const webRoutes = [
   { method: "POST", path: "/dashboard/addnation", config: dashboardController.addNation },
 
   { method: "GET", path: "/nation/{id}", config: nationController.index },
-  { method: "POST", path: "/nation/{id}/addlore", config: nationController.addLore },
+  { method: "POST", path: "/addlore", config: nationController.addLore },
 
 ];
