@@ -54,8 +54,20 @@
       "name": "Zuko"
     },
     {
-      "_id": "6553a2ef-01a6-42f4-8625-a163151ada8f",
+      "_id": "4aa2d0d2-d4b5-4ffa-8932-be681986b4fd",
       "name": "Azula"
+    },
+    {
+      "_id": "baf00e5d-c3a8-4d2b-9030-dad8ab96d4f9",
+      "name": "Katara"
+    },
+    {
+      "_id": "c66db4f6-3481-4f4d-a4e0-568c8b19a62c",
+      "name": "Fire Lord Ozai"
+    },
+    {
+      "_id": "896beee6-4e4a-43ca-92a8-f5054bcc4248",
+      "name": "Aang"
     }
   ]
 }

@@ -9,7 +9,7 @@ export const characterJsonStore = {
 
     async addCharacter(name) {
         await db.read();
-        // Check if the character already exists to prevent duplicates
+        // check for duplicates
         const existingCharacter = db.data.characters.find(character => character.name === name);
         if (existingCharacter) {
             return existingCharacter; // Return the existing character if found
