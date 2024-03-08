@@ -38,14 +38,6 @@
       "lore": "lorem ipsum",
       "_id": "664863e3-4106-4d78-84d0-e57eca5bd105",
       "nationid": "a12e162a-a40a-4085-be9d-49ba78c472d8"
-    },
-    {
-      "bookno": "2",
-      "charactersinv": "Zuko",
-      "location": "",
-      "lore": "",
-      "_id": "d91e2eb3-b730-4153-a6d2-5ae5b0348892",
-      "nationid": "a12e162a-a40a-4085-be9d-49ba78c472d8"
     }
   ],
   "characters": [

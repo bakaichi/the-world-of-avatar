@@ -1,7 +1,7 @@
 import { userJsonStore } from "./json/user-json-store.js";
 import { nationJsonStore } from "./json/nation-json-store.js";
 import { loreJsonStore } from "./json/lore-json-store.js";
-import { characterJsonStore } from "./json/character-json.store.js";
+import { characterJsonStore } from "./json/character-json-store.js";
 
 export const db = {
     userStore: null,
