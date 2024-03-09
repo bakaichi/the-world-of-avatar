@@ -14,7 +14,7 @@ export const maggie = {
     },
     {
       firstName: "a",
-      lastName: "Simpson",
+      lastName: "a",
       email: "a",
       password: "a",
     },

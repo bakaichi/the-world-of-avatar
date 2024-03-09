@@ -17,33 +17,57 @@
     {
       "firstName": "Bart",
       "lastName": "Simpson",
-      "email": "bart@simpson.com",
-      "password": "secret",
+      "email": "a",
+      "password": "a",
       "_id": "c7541cf3-9e5e-4762-bb17-b2959c9f4a86"
     }
   ],
   "nations": [
     {
       "title": "Fire Nation",
-      "_id": "42ae115a-3b3e-4cc8-b575-c715be16d9ec"
+      "_id": "9b401437-567d-47c3-982d-5ace14f7e033"
     },
     {
       "title": "Earth Kingdom",
-      "_id": "45ed9716-543b-4d49-a12c-5e28c1b5e1b1"
+      "_id": "f2a7b09c-f7ee-48e0-a962-bf86f19397dd"
     },
     {
-      "title": "Air Temples",
-      "_id": "cf11d302-9063-46cb-94d9-fdc435bc8b64"
+      "title": "Water Tribes",
+      "_id": "55cdb242-6855-4017-b151-cf881248cebb"
     }
   ],
   "lores": [
     {
       "bookno": "1",
-      "charactersinv": "Katara, Aang, Sokka",
-      "location": "Kyoshi Island",
-      "lore": "sadasdasd",
-      "_id": "1d67a189-2736-4e5f-97d8-33c3af8619ad",
-      "nationid": "42ae115a-3b3e-4cc8-b575-c715be16d9ec"
+      "charactersinv": "Aang",
+      "location": "Fire Nation",
+      "lore": "lorem ipsum",
+      "_id": "633628a3-1cc1-446a-8a01-da108c6ddf18",
+      "nationid": "431ed29f-8aee-47a2-8042-57faee6a38a2"
+    },
+    {
+      "bookno": "2",
+      "charactersinv": "Katara",
+      "location": "Water Nation",
+      "lore": "lorem ipsum",
+      "_id": "9b77d689-65d4-4a08-8124-590a1fd7d919",
+      "nationid": "431ed29f-8aee-47a2-8042-57faee6a38a2"
+    },
+    {
+      "bookno": "3",
+      "charactersinv": "Zuko",
+      "location": "Air Nation",
+      "lore": "lorem ipsum",
+      "_id": "cb64b9a3-ee1a-460f-9c97-88b0e60db02a",
+      "nationid": "431ed29f-8aee-47a2-8042-57faee6a38a2"
+    },
+    {
+      "bookno": "2",
+      "charactersinv": "Toph",
+      "location": "Earth Kingdom",
+      "lore": "lorem ipsum",
+      "_id": "ceb9b4e0-f46d-4168-9831-d3d11e5dba9c",
+      "nationid": "2465d6ed-88c6-4949-8dc0-957fd9f35148"
     }
   ],
   "characters": [
