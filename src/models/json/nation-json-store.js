@@ -19,9 +19,13 @@ export const nationJsonStore = {
   
     async getNationById(id) {
       await db.read();
-      // eslint-disable-next-line no-shadow
-      const nation = db.data.nations.find(nation => nation._id === id);
-      return nation;
+      let list  = db.data.nations.find((nation) => nation._id === id);
+      if (list) {
+        list.lores = await loreJsonStore.getLoresByNationId(list._id);
+      } else {
+        list = null;
+      }
+      return list;
     },
     
     async getUserNations(userid) {
@@ -32,7 +36,7 @@ export const nationJsonStore = {
     async deleteNationById(id) {
       await db.read();
       const index = db.data.nations.findIndex((nation) => nation._id === id);
-      db.data.nations.splice(index, 1);
+      if (index !== -1) db.data.nations.splice(index, 1);
       await db.write();
     },
   

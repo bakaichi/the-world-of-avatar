@@ -10,10 +10,19 @@ export const db = {
     characterStore: null,
     
   
-    init() {
-      this.userStore = userJsonStore;
-      this.nationStore = nationJsonStore;
-      this.loreStore = loreJsonStore;
-      this.characterStore = characterJsonStore;
+    init(storeType) {
+      switch (storeType) {
+        case "json":
+          this.userStore = userJsonStore;
+          this.nationStore = nationJsonStore;
+          this.loreStore = loreJsonStore;
+          this.characterStore = characterJsonStore;
+          break;
+        default:
+          this.userStore = userJsonStore;
+          this.nationStore = nationJsonStore;
+          this.loreStore = loreJsonStore;
+          this.characterStore = characterJsonStore;
+      }
     },
-  };
+};

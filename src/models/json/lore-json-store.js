@@ -16,22 +16,23 @@ export const loreJsonStore = {
     return lore;
   },
 
-getLoresByNationId: async function(id) {
-    await db.read();
-    const lores = db.data.lores.filter(lore => lore.nationid === id);
-    return lores;
-},
+  getLoresByNationId: async function(id) {
+      await db.read();
+      const lores = db.data.lores.filter(lore => lore.nationid === id);
+      return lores;
+  },
 
   async getLoreById(id) {
-    await db.read();
-    return db.data.lores.find((lore) => lore._id === id);
+    let foundLore = lores.find((lore) => lore._id === id);
+    if (!foundLore){
+      foundLore = null;
+    }
+    return foundLore;
   },
 
   async deleteLore(id) {
-    await db.read();
-    const index = db.data.lores.findIndex((lore) => lore._id === id);
-    db.data.lores.splice(index, 1);
-    await db.write();
+    const index = lores.findIndex((lore) => lore._id === id);
+    if (index !== -1) lores.splice(index, 1);
   },
 
   async deleteAllLores() {
