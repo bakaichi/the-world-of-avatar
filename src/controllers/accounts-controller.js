@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import { db } from "../models/db.js";
 
 export const accountsController = {
@@ -39,8 +40,13 @@ export const accountsController = {
       if (!user || user.password !== password) {
         return h.redirect("/");
       }
-      request.cookieAuth.set({ id: user._id });
-      return h.redirect("/dashboard");
+      request.cookieAuth.set({ id: user._id, role: user.role });
+  
+      // Check if the user is an admin and redirect accordingly
+      if (user.role === 'admin') {
+        return h.redirect("/admin/dashboard"); // Redirect to admin dashboard
+      } 
+        return h.redirect("/dashboard"); // Redirect to regular user dashboard
     },
   },
 
@@ -56,6 +62,6 @@ export const accountsController = {
     if (!user) {
       return { isValid: false };
     }
-    return {isValid: true, credentials: user };
+    return {isValid: true, credentials: {id: user._id, role: user.role} };
   },
 };

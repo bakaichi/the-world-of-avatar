@@ -1,6 +1,6 @@
 import { db } from "../models/db.js";
 
-export const dashboardController = {
+export const adminDashboardController = {
   index: {
     handler: async function (request, h) {
       const loggedInUser = request.auth.credentials;
@@ -12,7 +12,7 @@ export const dashboardController = {
         nations: nations,
         characters: characters,
       };
-      return h.view("dashboard-view", viewData);
+      return h.view("admin-dashboard-view", viewData);
     },
   },
 
@@ -24,6 +24,14 @@ export const dashboardController = {
         title: request.payload.title,
       };
       await db.nationStore.addNation(newNation);
+      return h.redirect("/admin/dashboard");
+    },
+  },
+
+  deleteNation: {
+    handler: async function (request, h) {
+      const nation = await db.nationStore.getNationById(request.params.id);
+      await db.nationStore.deleteNationById(nation._id);
       return h.redirect("/admin/dashboard");
     },
   },

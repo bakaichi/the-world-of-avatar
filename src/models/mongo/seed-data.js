@@ -12,6 +12,13 @@ export const seedData = {
       lastName: "Simpson",
       email: "a",
       password: "a"
+    },
+    admin: {
+      firstName: "Admin",
+      lastName: "Administrator",
+      email: "admin@admin.com",
+      password: "admin",
+      role: "admin"
     }
   },
   nations: {
@@ -51,4 +58,3 @@ export const seedData = {
     }
   }
 };
-

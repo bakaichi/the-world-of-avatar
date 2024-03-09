@@ -1,0 +1,18 @@
+{{#each nations}}
+  <div class="box box-link-hover-shadow">
+    <h2 class="title">
+      {{title}}
+    </h2>
+    <a href="/nation/{{_id}}" class="button">
+      <span class="icon is-small">
+        <i class="fas fa-folder-open"></i>
+      </span>
+    </a>
+      <a href="/admin/nation/deletenation/{{_id}}" class="delete-icon">
+    <span class="icon is-small">  
+        <i class="fas fa-trash"></i> 
+      </a>
+    </span>
+  </div>
+{{/each}}
+

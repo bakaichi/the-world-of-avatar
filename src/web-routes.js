@@ -1,6 +1,7 @@
 import { accountsController } from "./controllers/accounts-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
 import { nationController } from "./controllers/nation-controller.js";
+import { adminDashboardController } from "./controllers/admin-dashboard.js";
 
 export const webRoutes = [
   { method: "GET", path: "/", config: accountsController.index },
@@ -11,9 +12,11 @@ export const webRoutes = [
   { method: "POST", path: "/authenticate", config: accountsController.login },
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
-  { method: "POST", path: "/dashboard/addnation", config: dashboardController.addNation },
 
   { method: "GET", path: "/nation/{id}", config: nationController.index },
   { method: "POST", path: "/addlore", config: nationController.addLore },
 
+  { method: "GET", path: "/admin/dashboard", config: adminDashboardController.index },
+  { method: "POST", path: "/admin/dashboard/addnation", config: adminDashboardController.addNation },
+  { method: "GET", path: "/admin/nation/deletenation/{id}", config: adminDashboardController.deleteNation }
 ];

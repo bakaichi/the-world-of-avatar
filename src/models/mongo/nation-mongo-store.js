@@ -9,7 +9,6 @@ export const nationMongoStore = {
 
   async addNation(nation) {
     const newNation = new Nation(nation);
-    newNation._id = v4();
     const savedNation = await newNation.save();
     return savedNation;
   },
