@@ -18,5 +18,7 @@ export const webRoutes = [
 
   { method: "GET", path: "/admin/dashboard", config: adminDashboardController.index },
   { method: "POST", path: "/admin/dashboard/addnation", config: adminDashboardController.addNation },
-  { method: "GET", path: "/admin/nation/deletenation/{id}", config: adminDashboardController.deleteNation }
+  { method: "GET", path: "/admin/nation/deletenation/{id}", config: adminDashboardController.deleteNation },
+  { method: "GET", path: "/admin/users", config: adminDashboardController.displayUsers },
+  { method: "GET", path: "/admin/user/delete/{id}", config: adminDashboardController.deleteUser },
 ];

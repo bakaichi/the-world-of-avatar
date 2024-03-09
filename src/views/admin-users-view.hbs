@@ -1,0 +1,18 @@
+{{> admin-menu active="/admin/dashboard"}}
+<h2 class="title">Manage Users</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+      <tr>
+        <td>{{email}}</td>
+        <td><a class="button is-danger" href="/admin/user/delete/{{_id}}">Delete</a></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

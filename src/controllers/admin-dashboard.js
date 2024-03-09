@@ -1,3 +1,4 @@
+import { use } from "chai";
 import { db } from "../models/db.js";
 
 export const adminDashboardController = {
@@ -33,6 +34,29 @@ export const adminDashboardController = {
       const nation = await db.nationStore.getNationById(request.params.id);
       await db.nationStore.deleteNationById(nation._id);
       return h.redirect("/admin/dashboard");
+    },
+  },
+
+  deleteUser: {
+    handler: async function (request, h) {
+      if (request.auth.credentials.role !== "admin") {
+        return h.redirect("/");
+      }
+      await db.userStore.deleteUserById(request.params.id);
+      return h.redirect("/admin/users");
+    },
+  },
+
+  displayUsers: {
+    handler: async function (request, h) {
+      if (request.auth.credentials.role !== "admin") {
+        return h.redirect("/");
+      }
+      const users = await db.userStore.getAllUsers();
+      return h.view("admin-users-view", {
+        title: "Manage Users",
+        users: users,
+      });
     },
   },
 };
