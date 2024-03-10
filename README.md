@@ -15,6 +15,7 @@ An interactive web application for Avatar (cartoon) enthusiasts to explore and c
 
 --**Render**: ``` https://the-world-of-avatar.onrender.com```
 
+
 ### Test Accounts
 
 --**Test Admin**: username: ```admin@admin.com``` password: ``` admin ```
