@@ -9,13 +9,19 @@ export const nationController = {
             const characters = await db.characterStore.getAllCharacters(); // getting list of known characters
             const nation = await db.nationStore.getNationById(request.params.id);
             const lores = await db.loreStore.getLoresByNationId(request.params.id)
+            const loggedInUser = request.auth.credentials;
+            
             const viewData = {
                 title: "Nation",
                 nation: nation,
                 characters: characters,
                 lores: lores,
             };
+            if (loggedInUser && loggedInUser.role === "admin") {
+                return h.view("admin-lore-view", viewData);
+            } 
             return h.view("lore-view", viewData);
+            
         },
     },
 
@@ -49,4 +55,16 @@ export const nationController = {
         },
     },
     
+    deleteLore: {
+        handler: async function (request, h) {
+          try {
+            const nation = await db.nationStore.getNationById(request.params.id);
+            await db.loreStore.deleteLore(request.params.loreid); 
+            return h.redirect(`/nation/${nation._id}`); 
+          } catch (err) {
+            console.log(err);
+            return h.view('error', { errors: [{ message: 'Error deleting lore' }] }); 
+          }
+        },
+      },
 };

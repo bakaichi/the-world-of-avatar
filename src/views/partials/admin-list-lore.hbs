@@ -22,6 +22,12 @@
         <td>
           {{lore}}
         </td>
+        <td>
+          <a href="/nation/{{../nation._id}}/deletelore/{{_id}}" class="delete-lore-icon" onclick="return confirm('Are you sure?');">
+              <span class="icon is-small">
+                <i class="fas fa-trash"></i>
+            </span>
+         </td>
       </tr>
     {{/each}}
   </tbody>
