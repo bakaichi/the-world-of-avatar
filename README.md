@@ -1,13 +1,31 @@
+
+![5](https://github.com/bakaichi/the-world-of-avatar/assets/99150271/0369fa7d-d876-42a4-95d3-6bf3efa0523a)
+
 # Avatar Themed Dashboard Application
 
-![favicon](https://github.com/bakaichi/the-world-of-avatar/assets/99150271/0f3c4c79-75d6-4247-af20-57825b530852) An interactive web application for Avatar (cartoon) enthusiasts to explore and contribute to a virtual map of the Avatar universe.
+An interactive web application for Avatar (cartoon) enthusiasts to explore and contribute to a virtual map of the Avatar universe.
+
+## Technologies
+
+![tech-removebg-preview](https://github.com/bakaichi/the-world-of-avatar/assets/99150271/444c8899-1729-4fc8-bd41-7d1faf8a3ec4)
+
+## Deployed URL's
+
+--**Glitch**:
+--**Render**:
 
 ## Features
 
 - **Interactive Map**: Engage with a detailed map showcasing the rich geography of the Avatar world.
 - **Nation Management**: Add and manage different nations within the Avatar universe.
 - **Lore Contributions**: Share and view stories or historical accounts related to various nations.
-- **User Signups**: Users are able to signup and login to view the evergrowing lore in the universe we all love. 
+- **User Signups**: Users are able to signup and login to view the evergrowing lore in the universe we all love.
+- **Admin**: Admins are able to add and remove nations, remove lore and delete users.
+
+## Data Storage
+
+-**Data**: Data is stored in both JSON and Mongo formats, mongo db is currently hosted by Cloud Atlas, therefore env credentials are essential.
+
 
 ## Quick Start
 
