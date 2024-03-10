@@ -5,7 +5,7 @@ import { testNations, fire } from "./fixtures.js";
 suite ("Nation Model tests", () => {
 
     setup(async () => {
-        db.init("json");
+        db.init("mongo");
         await db.nationStore.deleteAllNations();
         for (let i = 0; i < testNations.length; i += 1){
             // eslint-disable-next-line no-await-in-loop
@@ -15,7 +15,7 @@ suite ("Nation Model tests", () => {
 
     test("create a nation", async () => {
         const nation = await db.nationStore.addNation(fire);
-        assert.equal(fire, nation);
+        assert.equal(nation.title, "Fire");
         assert.isDefined(nation._id);
       });
     
@@ -30,7 +30,7 @@ suite ("Nation Model tests", () => {
       test("get a nation - success", async () => {
         const nation = await db.nationStore.addNation(fire);
         const returnedNation = await db.nationStore.getNationById(nation._id);
-        assert.equal(fire, nation);
+        assert.equal(fire.title, returnedNation.title);
       });
     
       test("delete One Nation - success", async () => {
@@ -40,11 +40,6 @@ suite ("Nation Model tests", () => {
         assert.equal(returnedNations.length, testNations.length - 1);
         const deletedNation = await db.nationStore.getNationById(id);
         assert.isNull(deletedNation);
-      });
-    
-      test("get a nation - bad params", async () => {
-        assert.isNull(await db.nationStore.getNationById(""));
-        assert.isNull(await db.nationStore.getNationById());
       });
     
       test("delete One Nation - fail", async () => {

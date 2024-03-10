@@ -21,8 +21,9 @@ export const maggie = {
     {
       firstName: "Bart",
       lastName: "Simpson",
-      email: "bart@simpson.com",
-      password: "secret",
+      email: "admin@admin.com",
+      password: "admin",
+      role: "admin",
     },
   ];
 
@@ -69,5 +70,21 @@ export const maggie = {
       "lore": "lorem ipsum",
     }
   ];
+
+  export const testCharacters = [
+    {
+      name: "Aang",
+    },
+    {
+      name: "Katara",
+    },
+    {
+      name: "Zuko",
+    }
+  ];
+  
+  export const newCharacter = {
+    name: "Toph",
+  };
 
   export const serviceUrl = "http://localhost:3000";
