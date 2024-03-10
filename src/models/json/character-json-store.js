@@ -9,12 +9,13 @@ export const characterJsonStore = {
 
     async addCharacter(name) {
         await db.read();
+        const capitalized = this.capitalizeFirstLetter(name);
         // check for duplicates
-        const existingCharacter = db.data.characters.find(character => character.name === name);
+        const existingCharacter = db.data.characters.find(character => this.capitalizeFirstLetter(character.name) === capitalized);
         if (existingCharacter) {
             return existingCharacter; // Return the existing character if found
         }
-        const newCharacter = { _id: v4(), name: name };
+        const newCharacter = { _id: v4(), name: capitalized };
         db.data.characters.push(newCharacter);
         await db.write();
         return newCharacter;
@@ -38,4 +39,11 @@ export const characterJsonStore = {
         db.data.characters = [];
         await db.write();
     },
+
+    capitalizeFirstLetter(string) {
+        return string
+          .split(" ") // splits the name into multiple words
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) 
+          .join(" "); // rejoin words
+      }
 };
