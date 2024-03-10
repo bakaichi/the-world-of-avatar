@@ -11,8 +11,8 @@ An interactive web application for Avatar (cartoon) enthusiasts to explore and c
 
 ## Deployed URL's
 
---**Glitch**:
---**Render**:
+--**Glitch**: ```https://colorful-flint-leather.glitch.me ```
+--**Render**: ``` https://the-world-of-avatar.onrender.com```
 
 ## Features
 
