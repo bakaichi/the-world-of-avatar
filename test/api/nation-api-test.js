@@ -6,7 +6,7 @@ import { fire, testNations } from "../fixtures.js"
 
 EventEmitter.setMaxListeners(25);
 
-suite("Playlist API tests", () => {
+suite("Nation API tests", () => {
 
   setup(async () => {
   });

@@ -7,6 +7,7 @@ suite ("Nation Model tests", () => {
     setup(async () => {
         db.init("mongo");
         await db.nationStore.deleteAllNations();
+        await db.loreStore.deleteAllLores()
         for (let i = 0; i < testNations.length; i += 1){
             // eslint-disable-next-line no-await-in-loop
             testNations[i] = await db.nationStore.addNation(testNations[i]);
