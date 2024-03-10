@@ -11,7 +11,7 @@
     {{#each users}}
       <tr>
         <td>{{email}}</td>
-        <td><a class="button is-danger" href="/admin/user/delete/{{_id}}">Delete</a></td>
+        <td><a class="button is-danger" onclick="return confirm('Are you sure?');" href="/admin/user/delete/{{_id}}">Delete</a></td>
       </tr>
     {{/each}}
   </tbody>
