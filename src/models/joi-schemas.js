@@ -6,3 +6,14 @@ export const UserSpec = {
   email: Joi.string().email().required(),
   password: Joi.string().required(),
 };
+
+export const NationSpec = {
+  title: Joi.string().required(),
+};
+
+export const LoreSpec = {
+  bookno: Joi.number().required(),
+  charactersinv: Joi.string().required(),
+  location: Joi.string().required(),
+  lore: Joi.string().required(),
+}
