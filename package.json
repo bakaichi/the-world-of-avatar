@@ -32,5 +32,8 @@
     "mais-mongoose-seeder": "^1.0.7",
     "mongoose": "^8.2.1",
     "uuid": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
