@@ -29,28 +29,36 @@ export const nationController = {
         handler: async function (request, h) {
             const nationId = request.payload.nationid;
             const nation = await db.nationStore.getNationById(nationId);
-
+    
             let charactersInvolved = request.payload.charactersinv;
             
-            // ensure that the charactersinvolved is an array
+            // ensure that characters involved is an array
             if (!Array.isArray(charactersInvolved)) {
                 charactersInvolved = [charactersInvolved];
             }
-            // cleanup for ensuring unnecessary duplicate titles
-            const characterNames = charactersInvolved.map(name => typeof name === 'string' ? name.trim() : '').filter(name => name !== '');
     
-            // check if character already exists in db 
+            // capitalize words 
+            const capitalizeFirstLetter = (string) => string.split(' ')
+                             .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                             .join(' ');
+    
+            // capitalize and cleanup character names, ensuring no unnecessary duplicates
+            const characterNames = charactersInvolved.map(name => capitalizeFirstLetter(name.trim()))
+                                                     .filter((value, index, self) => self.indexOf(value) === index);
+    
+            // Check if character already exists in db and add if not
             for (const characterName of characterNames) {
                 await db.characterStore.addCharacter(characterName);
             }
     
             const newLore = {
                 bookno: request.payload.bookno,
-                charactersinv: characterNames.join(', '), // joins array with commas
+                charactersinv: characterNames.join(', '), // Joins array with commas
                 location: request.payload.location,
                 lore: request.payload.lore,
-            };    
-            await db.loreStore.addLore(nation._id, newLore);    
+            };
+    
+            await db.loreStore.addLore(nation._id, newLore);
             return h.redirect(`/nation/${nation._id}`);
         },
     },

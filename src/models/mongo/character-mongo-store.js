@@ -7,11 +7,12 @@ export const characterMongoStore = {
     },
   
     async addCharacter(name) {
-      const existingCharacter = await Character.findOne({ name: name }).lean();
+      const capitalized = this.capitalizeFirstLetter(name);
+      const existingCharacter = await Character.findOne({ name: capitalized }).lean();
       if (existingCharacter) {
         return existingCharacter;
       }
-      const newCharacter = new Character({name: name });
+      const newCharacter = new Character({name: capitalized });
       await newCharacter.save();
       return newCharacter;
     },
@@ -29,4 +30,11 @@ export const characterMongoStore = {
     async deleteAllCharacters() {
       await Character.deleteMany({});
     },
+
+    capitalizeFirstLetter(string) {
+      return string
+        .split(" ") // splits the name into multiple words
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()) 
+        .join(" "); // rejoin words
+    }
   };
