@@ -8,7 +8,7 @@ export const UserSpec = {
 };
 
 export const NationSpec = {
-  title: Joi.string().required(),
+  title: Joi.string().trim().min(2).required(),
 };
 
 export const LoreSpec = {
