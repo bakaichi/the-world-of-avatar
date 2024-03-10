@@ -1,6 +1,6 @@
 # Avatar Themed Dashboard Application
 
-An interactive web application for Avatar (cartoon) enthusiasts to explore and contribute to a virtual map of the Avatar universe.
+![favicon](https://github.com/bakaichi/the-world-of-avatar/assets/99150271/0f3c4c79-75d6-4247-af20-57825b530852) An interactive web application for Avatar (cartoon) enthusiasts to explore and contribute to a virtual map of the Avatar universe.
 
 ## Features
 
