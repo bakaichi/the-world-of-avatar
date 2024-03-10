@@ -69,3 +69,5 @@ export const maggie = {
       "lore": "lorem ipsum",
     }
   ];
+
+  export const serviceUrl = "http://localhost:3000";
