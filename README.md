@@ -1,5 +1,5 @@
 
-![5](https://github.com/bakaichi/the-world-of-avatar/assets/99150271/0369fa7d-d876-42a4-95d3-6bf3efa0523a)
+![image of avatar last airbender](https://github.com/bakaichi/the-world-of-avatar/assets/99150271/0369fa7d-d876-42a4-95d3-6bf3efa0523a)
 
 # Avatar Themed Dashboard Application
 
@@ -7,7 +7,7 @@ An interactive web application for Avatar (cartoon) enthusiasts to explore and c
 
 ## Technologies
 
-![tech-removebg-preview](https://github.com/bakaichi/the-world-of-avatar/assets/99150271/444c8899-1729-4fc8-bd41-7d1faf8a3ec4)
+![technology icons](https://github.com/bakaichi/the-world-of-avatar/assets/99150271/444c8899-1729-4fc8-bd41-7d1faf8a3ec4)
 
 ## Deployed URL's
 
